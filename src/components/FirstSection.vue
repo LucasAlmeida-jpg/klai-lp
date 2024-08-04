@@ -24,7 +24,7 @@
     padding: 50px;
   }
   .banner-image{
-    max-width: 500px;
+    max-width: 420px;
     object-fit: cover;
   }
   .bg-gradient{
