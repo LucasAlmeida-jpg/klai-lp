@@ -55,9 +55,13 @@ body {
 
 }
 
-.email a{
-  color: black;
+.email{
+  color: white;
   text-decoration: none;
+}
+.email a{
+  color: white;
+
 }
 
 
@@ -211,6 +215,11 @@ section .arrow {
   border: none;
   padding: 45px;
 }
+.logo_asset{
+  width: 92px;
+    border-radius: 50%;
+    border: 11px solid white;
+}
 
 .card:last-child {
   background-color: var(--primary);
@@ -347,16 +356,13 @@ section .arrow {
 
 footer {
   border-top: #3A3A3A 1px solid;
+  background-color: var(--primary);
   padding: 60px;
-}
-
-footer .footer-img{
-  width: 150px;
 }
 
 footer ul li a{
   text-decoration: none;
-  color: #3A3A3A;
+  color: white;
 }
 
 .accordion-item:not(:first-of-type) {
