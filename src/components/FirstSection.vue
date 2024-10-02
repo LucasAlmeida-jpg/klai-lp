@@ -67,13 +67,6 @@
           </div>
       </section>
       <main>
-      <div class="carousel-container">
-        <Carousel :items-to-show="1" autoplay>
-          <Slide v-for="(slide, index) in slides" :key="index">
-            <img :src="slide.image" :alt="slide.alt" />
-          </Slide>
-        </Carousel>
-      </div>
           <div class="container" id="como-funciona">
               <h2 class="margin-section">Por que escolher a Klai?</h2>
               <div class="card" v-for="(item, index) in items" :key="index">
@@ -138,6 +131,17 @@
                   </div>
               </div>
           </div> -->
+        <div class="carousel-container mt-5">
+          <Carousel :items-to-show="3" autoplay>
+            <Slide class="me-2" v-for="(slide, index) in slides" :key="index">
+              <div class="card position-relative">
+                <img class="icon_testimonial position-absolute" src="../assets/happy-person.png" alt="">
+                <h1>Name of Pião</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, tempora autem dolor dicta ex fugit facere? Illo consequatur ea incidunt quaerat sunt officia commodi deleniti assumenda accusamus, sed maxime perferendis.</p>
+              </div>
+            </Slide>
+          </Carousel>
+        </div>
       </main>
       <div class="margin-section"></div>
       <footer class="text-dark">
@@ -213,24 +217,29 @@ export default {
         { image: 'https://via.placeholder.com/800x400?text=Slide+1', alt: 'Slide 1' },
         { image: 'https://via.placeholder.com/800x400?text=Slide+2', alt: 'Slide 2' },
         { image: 'https://via.placeholder.com/800x400?text=Slide+3', alt: 'Slide 3' },
+        { image: 'https://via.placeholder.com/800x400?text=Slide+3', alt: 'Slide 4' },
+        { image: 'https://via.placeholder.com/800x400?text=Slide+3', alt: 'Slide 5' },
+        { image: 'https://via.placeholder.com/800x400?text=Slide+3', alt: 'Slide 5' },
+        { image: 'https://via.placeholder.com/800x400?text=Slide+3', alt: 'Slide 6' },
+        { image: 'https://via.placeholder.com/800x400?text=Slide+3', alt: 'Slide 7' },
       ],
       items: [
         {
           numbers: "./2.svg",
           title: "Trilhas Personalizadas",
-          image: "../Group527.png",
+          image: "../assets/aprendizado.png",
           description: "As aulas são cuidadosamente preparadas para atender às necessidades individuais de cada aluno, por meio de trilhas de aprendizado exclusivas e metas individuais para cada diferente estilo de aprendizado.",
         },
         {
           numbers: "./22.svg",
           title: "Aprendizado Estratégico",
-          image: "./Group539.png",
+          image: "../assets/aprendizado.png",
           description: "Aprenda por meio de situações do dia a dia, tornando o aprendizado mais prático e eficiente. Vai fazer aquela entrevista em inglês ou está precisando de ajuda para sua apresentação no trabalho? Vamos praticar!",
         },
         {
           numbers: "./4.svg",
           title: "Feedbacks Recorrentes",
-          image: "./Group528.png",
+          image: "../assets/aprendizado.png",
           description: "Feedbacks regulares, destacando suas conquistas e apontando maneiras específicas para que você possa avançar, moldando o caminho de acordo com suas necessidades.",
         },
        
