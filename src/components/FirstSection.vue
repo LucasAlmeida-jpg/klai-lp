@@ -71,8 +71,9 @@
               <h2 class="margin-section">Por que escolher a Klai?</h2>
               <div class="card" v-for="(item, index) in items" :key="index">
                   <div class="row d-flex align-items-center">
-                      <div class="col-md-6 img-star d-flex align-items-center justify-content-center"><img
-                              :src="item.image" alt=""></div>
+                      <div class="col-md-6 d-flex align-items-center justify-content-center">
+                      <img style="width: 188px;" src="../assets/aprendizado.png" alt=""> 
+                      </div>
                       <div class="col-md-6 info">
                           <h2 class="item-title"><span class="me-3"><img :src="item.numbers" alt=""></span>{{
                               item.title }}
@@ -85,7 +86,7 @@
               <div class="card" v-for="(item, index) in itemsWork" :key="index">
                   <div class="row d-flex align-items-center">
                       <div class="col-md-6 img-star d-flex align-items-center justify-content-center"><img
-                              :src="item.image" alt=""></div>
+                        style="width: 188px;     filter: invert(1);"  src="../assets/feedback.png" alt=""></div>
                       <div class="col-md-6 info">
                           <p class="item-description" v-html="item.description"></p>
                       </div>
@@ -136,7 +137,7 @@
             <Slide class="me-2" v-for="(slide, index) in slides" :key="index">
               <div class="card position-relative">
                 <img class="icon_testimonial position-absolute" src="../assets/happy-person.png" alt="">
-                <h1>Name of Pião</h1>
+                <h1>Pião's name</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, tempora autem dolor dicta ex fugit facere? Illo consequatur ea incidunt quaerat sunt officia commodi deleniti assumenda accusamus, sed maxime perferendis.</p>
               </div>
             </Slide>
@@ -227,19 +228,19 @@ export default {
         {
           numbers: "./2.svg",
           title: "Trilhas Personalizadas",
-          image: "../assets/aprendizado.png",
+          image: "../aprendizado.png",
           description: "As aulas são cuidadosamente preparadas para atender às necessidades individuais de cada aluno, por meio de trilhas de aprendizado exclusivas e metas individuais para cada diferente estilo de aprendizado.",
         },
         {
           numbers: "./22.svg",
           title: "Aprendizado Estratégico",
-          image: "../assets/aprendizado.png",
+          image: "../aprendizado.png",
           description: "Aprenda por meio de situações do dia a dia, tornando o aprendizado mais prático e eficiente. Vai fazer aquela entrevista em inglês ou está precisando de ajuda para sua apresentação no trabalho? Vamos praticar!",
         },
         {
           numbers: "./4.svg",
           title: "Feedbacks Recorrentes",
-          image: "../assets/aprendizado.png",
+          image: "../aprendizado.png",
           description: "Feedbacks regulares, destacando suas conquistas e apontando maneiras específicas para que você possa avançar, moldando o caminho de acordo com suas necessidades.",
         },
        
@@ -268,7 +269,7 @@ export default {
       ],
       itemsWork: [
         {
-          image: "./Group544.png",
+          image: "../../assets/feedback.png",
           description: "4 Técnicas Inovadoras para Turbinar Sua Fluência em Inglês <br/><br/><br/> Dominar um novo idioma é uma jornada emocionante, mas às vezes desafiadora. A busca pela fluência em inglês pode ser transformada em uma experiência envolvente e eficaz ao incorporar técnicas inovadoras ao seu aprendizado. Neste artigo, exploraremos quatro abordagens diferenciadas que não apenas tornarão sua jornada de aprendizado mais empolgante, mas também irão impulsionar significativamente sua fluência no inglês. Está pronto para uma revolução no seu aprendizado de inglês? Vamos começar!"
         }
       ],
