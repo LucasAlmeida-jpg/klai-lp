@@ -5,8 +5,8 @@
       <header>
           <nav class="navbar navbar-expand-lg menu">
               <div class="container d-flex justify-content-between">
-                  <a class="navbar-brand" href="https://creators.llc/" target="_blank">
-                      <img class="logo_asset" src="../assets/logo.JPG" alt="">
+                  <a class="navbar-brand" href="#" target="_blank">
+                      <img class="logo_asset" src="../assets/logo.png" alt="">
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
                       aria-expanded="false" aria-label="Toggle navigation">
@@ -15,16 +15,16 @@
 
                   <div class="collapse navbar-collapse" id="navbarMenu">
                       <ul class="navbar-nav">
-                          <li class="nav-item">
+                          <!-- <li class="nav-item">
                               <a class="nav-link" href="#como-funciona">Aulas</a>
                           </li>
                           <li class="nav-item">
                               <a class="nav-link" href="#como-participar">Cursos Gravados</a>
-                          </li>
+                          </li> -->
                           <!-- <li class="nav-item">
                               <a class="nav-link" href="#">Mentores</a>
                           </li> -->
-                          <li class="nav-item">
+                          <!-- <li class="nav-item">
                               <a class="nav-link" href="#programacao">Livros</a>
                           </li>
                           <li class="nav-item">
@@ -32,11 +32,11 @@
                           </li>
                           <li class="nav-item">
                               <a class="nav-link" href="#faq">Blog</a>
-                          </li>
+                          </li> -->
                           <li class="nav-item">
-                              <a class="nav-link" href="#faq">Abstract</a>
+                              <a class="nav-link" href="#abstract">Abstract</a>
                           </li>
-                          <li class="nav-item">
+                          <!-- <li class="nav-item">
                               <a class="nav-link" href="#faq">Sobre</a>
                           </li>
                           <li class="nav-item">
@@ -44,7 +44,7 @@
                           </li>
                           <li class="nav-item">
                               <a class="btn-primary" href="#faq">Login</a>
-                          </li>
+                          </li> -->
                       
                       </ul>
                   </div>
@@ -67,6 +67,13 @@
           </div>
       </section>
       <main>
+      <div class="carousel-container">
+        <Carousel :items-to-show="1" autoplay>
+          <Slide v-for="(slide, index) in slides" :key="index">
+            <img :src="slide.image" :alt="slide.alt" />
+          </Slide>
+        </Carousel>
+      </div>
           <div class="container" id="como-funciona">
               <h2 class="margin-section">Por que escolher a Klai?</h2>
               <div class="card" v-for="(item, index) in items" :key="index">
@@ -147,7 +154,7 @@
                       </div>
                   </div>
                   <div class="col-md-6 text-md-end">
-                    <img class="logo_asset" src="../assets/logo.JPG" alt="">
+                    <img class="logo_asset" src="../assets/logo.png" alt="">
                       <p class="mt-3 email">Fale conosco | <a href="mailto:hello@creators.llc">klaienglish@gmail.com</a>
                       </p>
                   </div>
@@ -157,7 +164,13 @@
   </div>
 </template>
 <script>
+import { Carousel, Slide } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
 export default {
+  components: {
+    Carousel,
+    Slide,
+  },
   data() {
     return {
       activeIndex: null,
@@ -195,6 +208,11 @@ export default {
           title: 'Qual a duração do projeto?',
           content: 'Não há previsão de encerramento, enquanto você entregar conteúdos no programa, o comissionamento estará ativo.'
         },
+      ],
+      slides: [
+        { image: 'https://via.placeholder.com/800x400?text=Slide+1', alt: 'Slide 1' },
+        { image: 'https://via.placeholder.com/800x400?text=Slide+2', alt: 'Slide 2' },
+        { image: 'https://via.placeholder.com/800x400?text=Slide+3', alt: 'Slide 3' },
       ],
       items: [
         {
